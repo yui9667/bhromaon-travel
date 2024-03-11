@@ -69,7 +69,8 @@
   position: relative;
   .spain-container1 {
     @include spinContainer;
-    bottom: 0;
+    bottom: 10%;
+    left: 10%;
   }
   h5 {
     @include spinContainerh5;
@@ -99,7 +100,8 @@
 
   .spain-container2 {
     @include spinContainer;
-    right: 0;
+    right: 10%;
+    top: 10%;
   }
   h5 {
     @include spinContainerh5;
@@ -160,7 +162,7 @@
     }
     .images-container {
       display: grid;
-      width: 200px;
+      width: 150px;
       height: 170px;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(20, 1fr);
@@ -174,6 +176,18 @@
       width: 120px;
       grid-column: 2/4;
       grid-row: 11/20;
+    }
+    .icons-img {
+      max-width: 100%;
+      width: 380px;
+    }
+    .icons-letter-box {
+      padding: 0 20px;
+      margin: 0 20px;
+    }
+
+    .sam-description {
+      width: 200px;
     }
   }
 }
