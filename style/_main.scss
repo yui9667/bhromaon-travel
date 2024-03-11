@@ -1,0 +1,88 @@
+@use "./function";
+@use "./variable";
+
+.section1 {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+  .choose-us-box {
+    background-image: url(/images/background2.png);
+    @include backgroundImage;
+    @include flexCenter;
+    justify-content: center;
+  }
+  .letter-container {
+    text-align: center;
+  }
+  h2 {
+    font-size: 0.8rem;
+  }
+  p {
+    font-size: 0.4rem;
+    padding: 10px;
+  }
+  .explore-btn {
+    @include btn;
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 0.3rem;
+    margin-bottom: 10px;
+  }
+  .images-container {
+    display: flex;
+  }
+  .explore-img {
+    width: 100px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+  .incons-container {
+    background-color: #333333;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icons-letter-box {
+    display: flex;
+    font-size: 0.5rem;
+    justify-content: space-around;
+  }
+}
+/*Section*/
+.section2 {
+  background-image: url(/images/background3.png);
+  @include backgroundImage;
+  height: 10rem;
+  .spain-containe1 {
+    background-color: $background-color;
+    width: 100px;
+    height: 100px;
+  }
+  h5 {
+    font-size: 0.6rem;
+    color: $p-color;
+    letter-spacing: 2px;
+  }
+  h4 {
+    font-size: 0.6rem;
+  }
+  p {
+    font-size: 0.4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section1 {
+    height: 70vh;
+    max-width: 100%;
+    width: 100%;
+
+    .choose-us-box {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@mixin backgroundImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@mixin btn {
+  border-style: none;
+  background-color: $main-color;
+
+  color: $letter-color;
+  letter-spacing: 1px;
+  font-family: $font-family;
+}
+@mixin btn-hover {
+}
+@function get_vw($size, $viewport: 320) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size: 10) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
