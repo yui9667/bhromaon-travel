@@ -4,16 +4,21 @@
 header {
   background-image: url(/images/background1.png);
   @include backgroundImage;
-  height: 11rem;
+  height: 10rem;
   .header-letter-container {
     @include flexCenter;
+    text-align: center;
+    padding-top: 20px;
     h1 {
       font-size: 1rem;
       letter-spacing: 4px;
+      margin: 0;
     }
-    h3 {
+    p {
       font-size: 0.4rem;
       letter-spacing: 2.5px;
+      padding-bottom: 5px;
+      margin-top: 0;
     }
   }
 
@@ -40,8 +45,15 @@ header {
       width: 3.4rem;
       font-size: 6px;
       position: absolute;
-      top: 62.4px;
+      top: 60px;
       right: 49.6px;
+      &:hover {
+        /*Unalbe to work here*/
+        box-shadow: 1px 1px 2px;
+        background-color: #fff;
+        border: 1px solid $main-color;
+        color: $main-color;
+      }
     }
   }
   .scroll-container {
@@ -52,10 +64,14 @@ header {
       font-size: 0.4rem;
       text-align: center;
       font-weight: lighter;
+      padding-top: 10px;
+      margin-bottom: 2px;
     }
     .fa-chevron-down {
       margin: 0 auto;
       padding-bottom: 20px;
+      margin-top: 0;
+      font-size: 0.4rem;
     }
   }
   .nav-container {
@@ -65,11 +81,12 @@ header {
     align-content: center;
     background-color: $main-color;
     font-size: 0.32rem;
-    padding: 6.2px;
+    padding: 7px;
   }
   .logo {
     padding-left: 0px;
     margin-right: auto;
+    letter-spacing: 1px;
   }
   .nav-box {
     display: flex;
@@ -82,8 +99,9 @@ header {
     padding-left: 10px;
   }
   a {
+    font-size: 0.3rem;
     text-decoration: none;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
     color: $letter-color;
   }
 }

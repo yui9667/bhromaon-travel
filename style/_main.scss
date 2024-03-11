@@ -19,6 +19,7 @@
   }
   h2 {
     font-size: 0.8rem;
+    font-family: $font-family;
   }
   p {
     font-size: 0.4rem;
@@ -30,9 +31,13 @@
     height: 1.5rem;
     font-size: 0.3rem;
     margin-bottom: 10px;
+    &:hover {
+      animation: bounce 1.3s;
+    }
   }
   .images-container {
     display: flex;
+    padding: 10px 0;
   }
   .explore-img {
     width: 100px;
@@ -45,7 +50,11 @@
     display: flex;
     flex-direction: column;
   }
-
+  .icons-img {
+    width: 250px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
   .icons-letter-box {
     display: flex;
     font-size: 0.5rem;
@@ -57,24 +66,78 @@
   background-image: url(/images/background3.png);
   @include backgroundImage;
   height: 10rem;
-  .spain-containe1 {
-    background-color: $background-color;
-    width: 100px;
-    height: 100px;
+  position: relative;
+  .spain-container1 {
+    @include spinContainer;
+    bottom: 0;
   }
   h5 {
-    font-size: 0.6rem;
-    color: $p-color;
-    letter-spacing: 2px;
+    @include spinContainerh5;
   }
   h4 {
+    @include spainContainerh4;
+  }
+  p {
+    @include spainContainerp;
+  }
+}
+.book-btn {
+  @include btn;
+  font-size: 0.4rem;
+  width: 4rem;
+  height: 1rem;
+  &:hover {
+    animation: bounce 1.3s;
+  }
+}
+/*Section3*/
+.section3 {
+  background-image: url(/images/background4.png);
+  @include backgroundImage;
+  height: 11rem;
+  position: relative;
+
+  .spain-container2 {
+    @include spinContainer;
+    right: 0;
+  }
+  h5 {
+    @include spinContainerh5;
+  }
+  h4 {
+    @include spainContainerh4;
+  }
+  p {
+    @include spainContainerp;
+  }
+}
+/*Last section*/
+.last-section {
+  background-image: url(/images/background5.png);
+  height: 12rem;
+  @include backgroundImage;
+  @include flexCenter;
+  .sam-container {
+    display: flex;
+    margin: 0 20px;
+  }
+  h2 {
+    font-size: 0.8rem;
+    font-family: $font-family;
+  }
+  .sam-img {
+    width: 150px;
+  }
+  .sam-description {
+    background-color: #333333;
+  }
+  h5 {
     font-size: 0.6rem;
   }
   p {
     font-size: 0.4rem;
   }
 }
-
 @media (min-width: 1000px) {
   .section1 {
     height: 70vh;
